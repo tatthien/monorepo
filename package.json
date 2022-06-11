@@ -1,10 +1,11 @@
 {
   "name": "@tatthien/monorepo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "release": "esno scripts/release.ts",
+    "publish": "esno scripts/publish.ts",
     "update": "esno scripts/update.ts"
   },
   "keywords": [],
