@@ -1,5 +1,11 @@
 # monorepo
 
+Install dependencies
+
+```
+$ npm install
+```
+
 Bump package version
 
 ```
