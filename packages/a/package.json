@@ -1,0 +1,28 @@
+{
+  "name": "@tatthien/a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "scripts": {
+    "build": "run-p \"build:* -- {@}\" --",
+    "build:esm": "tsc --project tsconfig.json --module ES2015 --outDir ./dist/esm",
+    "build:cjs": "tsc --project tsconfig.json --module CommonJS --outDir ./dist/cjs",
+    "cleanup": "rimraf ./dist",
+    "prepublishOnly": "npm run cleanup && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
